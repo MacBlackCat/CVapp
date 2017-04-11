@@ -3,7 +3,7 @@
 // To debug code on page load in cordova-simulate or on Android devices/emulators: launch your app, set breakpoints, 
 // and then run "window.location.reload()" in the JavaScript Console.
 (function () {
-    "use strict";
+    "use strict";   
 
     document.addEventListener( 'deviceready', onDeviceReady.bind( this ), false );
 
@@ -18,13 +18,32 @@
         var receivedElement = parentElement.querySelector('.received');
         listeningElement.setAttribute('style', 'display:none;');
         receivedElement.setAttribute('style', 'display:block;');
-    };
+    }
 
     function onPause() {
         // TODO: This application has been suspended. Save application state here.
-    };
+    }
 
     function onResume() {
         // TODO: This application has been reactivated. Restore application state here.
+    }
+})();
+
+function testDatabase() {
+    // Initialize Firebase
+    var config = {
+        apiKey: "AIzaSyCGybAZT1hrNpF0wxH9UOVmNwUeAyWwafI",
+        authDomain: "myprojects-67e32.firebaseapp.com",
+        databaseURL: "https://myprojects-67e32.firebaseio.com",
+        projectId: "myprojects-67e32",
+        storageBucket: "myprojects-67e32.appspot.com",
+        messagingSenderId: "566617132517"
     };
-} )();
+    firebase.initializeApp(config);
+
+    var database = firebase.database();
+    database.ref('/test').once('value').then(function (snappyData) {
+        console.log(snappyData.val().value);
+    });
+}
+testDatabase();
