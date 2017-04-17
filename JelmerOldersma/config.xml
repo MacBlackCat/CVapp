@@ -9,7 +9,6 @@
   <engine name="ios" spec="4.2.0" />
   <engine name="windows" spec="4.4.2" />
   <content src="index.html" />
-  <access origin="*" />
   <preference name="SplashScreen" value="screen" />
   <preference name="windows-target-version" value="10.0" />
   <!-- Support for Cordova 5.0.0 plugin system -->
@@ -108,4 +107,7 @@
   <plugin name="cordova-plugin-device-orientation" spec="~1.0.6" />
   <plugin name="cordova-plugin-device" spec="~1.1.5" />
   <plugin name="cordova-plugin-splashscreen" spec="~4.0.2" />
+  <access origin="firebaseio.com" />
+  <access origin="firebaseapp.com" />
+  <access origin="google.com" />
 </widget>
