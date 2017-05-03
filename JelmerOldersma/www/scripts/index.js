@@ -31,7 +31,7 @@
 
 function testDatabase() {
     // Initialize Firebase
-    var config = {
+    /*var config = {
         apiKey: "AIzaSyCGybAZT1hrNpF0wxH9UOVmNwUeAyWwafI",
         authDomain: "myprojects-67e32.firebaseapp.com",
         databaseURL: "https://myprojects-67e32.firebaseio.com",
@@ -39,9 +39,10 @@ function testDatabase() {
         storageBucket: "myprojects-67e32.appspot.com",
         messagingSenderId: "566617132517"
     };
-    firebase.initializeApp(config);
+    firebase.initializeApp(config);*/
 
     var database = firebase.database();
+    firebase.enablelogging(true);
     database.ref('/test').once('value').then(function (snappyData) {
         //console.log(snappyData.val().value);
         $("#derptest").html("<h1>" + snappyData.val().value + "</h1>");
