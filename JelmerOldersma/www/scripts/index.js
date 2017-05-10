@@ -3,7 +3,8 @@
 // To debug code on page load in cordova-simulate or on Android devices/emulators: launch your app, set breakpoints, 
 // and then run "window.location.reload()" in the JavaScript Console.
 (function () {
-    "use strict";   
+    "use strict";
+    testDatabase();
 
     document.addEventListener( 'deviceready', onDeviceReady.bind( this ), false );
 
@@ -30,6 +31,7 @@
 })();
 
 function testDatabase() {
+    $("#derptest").html("<h1>error2.0</h1>");
     // Initialize Firebase
     /*var config = {
         apiKey: "AIzaSyCGybAZT1hrNpF0wxH9UOVmNwUeAyWwafI",
@@ -42,10 +44,9 @@ function testDatabase() {
     firebase.initializeApp(config);*/
 
     var database = firebase.database();
-    firebase.enablelogging(true);
+
     database.ref('/test').once('value').then(function (snappyData) {
-        //console.log(snappyData.val().value);
+        console.log(snappyData.val().value);
         $("#derptest").html("<h1>" + snappyData.val().value + "</h1>");
     });
 }
-testDatabase();
