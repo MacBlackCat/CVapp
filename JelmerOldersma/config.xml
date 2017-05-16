@@ -104,7 +104,7 @@
     <splash src="res/screens/windows/SplashScreen.scale-240.png" width="1152" height="1920" />
     <splash src="res/screens/windows/SplashScreenPhone.scale-240.png" width="1152" height="1920" />
   </platform>
-  <preference name="Fullscreen" value="True" />
+  <preference name="Fullscreen" value="False" />
   <preference name="Orientation" value="default" />
   <plugin name="cordova-plugin-device-orientation" spec="~1.0.6" />
   <plugin name="cordova-plugin-device" spec="~1.1.5" />
@@ -112,4 +112,5 @@
   <access origin="firebaseio.com" />
   <access origin="firebaseapp.com" />
   <access origin="google.com" />
+  <access origin="j-oldersma.nl" />
 </widget>

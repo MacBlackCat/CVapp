@@ -1,11 +1,11 @@
 {
      "android": {
-         "release": {
-             "keystore": "",
-             "storePassword": "",
-             "alias": "",
-             "password" : "",
-             "keystoreType": ""
-         }
+      "release": {
+        "keystore": "c:\\androidkeystoreJO.keystore",
+        "storePassword": "maxo10",
+        "alias": "JO",
+        "password": "maxo10",
+        "keystoreType": ""
+      }
      }
  }

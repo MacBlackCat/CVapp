@@ -4,9 +4,9 @@
 // and then run "window.location.reload()" in the JavaScript Console.
 (function () {
     "use strict";
-    testDatabase();
+    //testDatabase();
 
-    document.addEventListener( 'deviceready', onDeviceReady.bind( this ), false );
+    document.addEventListener('deviceready', onDeviceReady.bind(this), false);
 
     function onDeviceReady() {
         // Handle the Cordova pause and resume events
@@ -31,22 +31,12 @@
 })();
 
 function testDatabase() {
-    $("#derptest").html("<h1>error2.0</h1>");
-    // Initialize Firebase
-    /*var config = {
-        apiKey: "AIzaSyCGybAZT1hrNpF0wxH9UOVmNwUeAyWwafI",
-        authDomain: "myprojects-67e32.firebaseapp.com",
-        databaseURL: "https://myprojects-67e32.firebaseio.com",
-        projectId: "myprojects-67e32",
-        storageBucket: "myprojects-67e32.appspot.com",
-        messagingSenderId: "566617132517"
-    };
-    firebase.initializeApp(config);*/
-
+    //$("#derptest").html("<h1>error2.0</h1>");
     var database = firebase.database();
 
-    database.ref('/test').once('value').then(function (snappyData) {
+    // TEST code, enable to test Android deployment/firebase connection
+    /*database.ref('/test').once('value').then(function (snappyData) {
         console.log(snappyData.val().value);
         $("#derptest").html("<h1>" + snappyData.val().value + "</h1>");
-    });
+    });*/ 
 }

@@ -18,51 +18,40 @@
     <title>JelmerOldersma</title>
 </head>
 <body>
-    <div class="title-bar" id="topHeader">
-        <span class="title-bar-title">CV App</span>
+    <div class="title-bar" id="topHeader"><!-- Title bar -> Title + hamburger button for offcanvas menu -->
+        <button type="button" class="float-left menu-icon" data-toggle="offCanvasLeft"></button>
+        <span class="title-bar-title float-center">CV App</span>
     </div>
+    <!-- Test div, for android deployment/firebase connection
     <div class="row">
         <div id="derptest"><h6>Error</h6></div>
     </div>
+       -->
+    <div class="off-canvas-wrapper">
+        <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper>
+            <!-- Offcanvas Content -->
+            <div class="off-canvas position-left" id="offCanvasLeft" data-off-canvas>
+                <button class="close-button" aria-label="Close menu" type="button" data-close> <!-- Close button -->
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                
+                <ul> <!-- Menu List -->
+                    <li><a href="#" onclick="loadPage('home')">Home</a></li>
+                    <li><a href="#" onclick="loadPage('projects')">Projects</a></li>
+                    <li><a href="#" onclick="loadPage('about')">About Me</a></li>
+                    <li><a href="#" onclick="loadPage('contact')">Contact</a></li>
+                </ul>
+            </div>
+            <!-- -->
 
-    <div class="row">
-        <h4>Enkele projecten:</h4>
+            <!-- Main content div-->
+            <div class="off-canvas-content" data-off-canvas-content id="mainContainer">
+
+            </div>
+            <!-- -->
+
+        </div>
     </div>
-    <ul class="accordion" data-accordion data-allow-all-closed="true" id="projectsList">
-        <li class="accordion-item" data-accordion-item>
-            <a href="#" class="accordion-title">Demo accordion1</a>
-            <div class="accordion-content" data-tab-content>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eget mi id velit vulputate lobortis a iaculis neque. Aliquam ornare felis quis enim sodales, at accumsan urna aliquam. Integer nulla purus, tempor eu tincidunt ac, cursus vitae mauris. Proin sit amet mauris vehicula, rutrum mauris ut, vulputate ipsum. Vivamus id ligula interdum, tincidunt est vel, sagittis elit. Phasellus blandit elit id sagittis consectetur. Nunc non tristique risus. Fusce pretium sapien eget purus vulputate imperdiet. Nam nec dictum lacus, nec iaculis mauris. Cras justo erat, tempus eu nibh eu, dignissim cursus magna. In lacinia pretium ante ultricies congue. Maecenas iaculis, nisi at blandit congue, nisi felis facilisis urna, sit amet pellentesque mi ex in urna.
-
-                    Phasellus egestas ligula quis ex ultrices, et vestibulum dui tempus. Nam eu purus ullamcorper, tristique quam a, dignissim odio. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed ultricies nulla urna. Sed et eros efficitur, feugiat lacus sit amet, finibus odio. Praesent posuere ante ut massa viverra bibendum. Integer mauris nisi, porta efficitur ultricies suscipit, rhoncus et nibh. Vivamus consequat nec odio quis blandit. Nam euismod pharetra sapien sed pellentesque. Sed eleifend erat enim, vitae hendrerit tortor facilisis at. Phasellus ut cursus erat. In id ante a magna ultrices bibendum sit amet quis quam. Phasellus erat odio, ultricies eget diam ut, porta condimentum elit. Nunc facilisis, purus ut elementum congue, ligula orci cursus sapien, sit amet aliquet felis dui tincidunt odio. Praesent eget tincidunt quam.
-
-                    Donec eget feugiat ex. Donec sapien lorem, cursus quis dolor non, blandit elementum orci. Cras id velit tempus, pretium felis at, pretium ante. Fusce eu sapien accumsan, blandit velit nec, rutrum nisi. Quisque malesuada tellus rhoncus magna gravida scelerisque. Quisque tincidunt ante ut diam vestibulum ultrices. Mauris porta aliquet urna et porta. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed sit amet elit eget tortor convallis pellentesque id eget tortor. Nulla sagittis, tortor ac porta sagittis, leo est volutpat purus, ut laoreet diam magna a felis. Sed ut ultrices risus. Duis eu nibh sed turpis consectetur consequat et a urna.
-
-                    Fusce quis porttitor elit. Proin erat ante, rutrum a orci at, luctus varius felis. Vestibulum ullamcorper diam id convallis feugiat. Morbi eleifend, nisl sit amet interdum interdum, augue diam placerat mauris, eu vehicula purus arcu eget tortor. Aliquam convallis facilisis finibus. Morbi sit amet commodo arcu. In eget laoreet dui, quis dapibus odio. Aliquam rhoncus eros congue urna semper, ut congue justo molestie. Suspendisse potenti. Suspendisse ultrices tincidunt scelerisque. Quisque id risus nisl.
-
-                    Nam a quam at ex bibendum tempor vel vitae nisi. Pellentesque ut eros et libero tincidunt ullamcorper sollicitudin sed leo. Sed mollis ante a arcu tincidunt, sit amet ultricies nisl blandit. Aenean tincidunt ante et purus hendrerit, a laoreet massa gravida. Vestibulum vel tristique eros, ut interdum metus. Ut vel nibh quis neque elementum elementum ut sed ante. Aliquam aliquet erat non leo porttitor congue. Integer in convallis ante. Sed vitae felis diam. Donec at porta sapien, ut dictum lorem. Maecenas orci lacus, bibendum eget nunc ut, tincidunt mattis lectus.
-                </p>
-            </div>
-        </li>
-        <li class="accordion-item" data-accordion-item>
-            <a href="#" class="accordion-title">Demo accordion2</a>
-            <div class="accordion-content" data-tab-content>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eget mi id velit vulputate lobortis a iaculis neque. Aliquam ornare felis quis enim sodales, at accumsan urna aliquam. Integer nulla purus, tempor eu tincidunt ac, cursus vitae mauris. Proin sit amet mauris vehicula, rutrum mauris ut, vulputate ipsum. Vivamus id ligula interdum, tincidunt est vel, sagittis elit. Phasellus blandit elit id sagittis consectetur. Nunc non tristique risus. Fusce pretium sapien eget purus vulputate imperdiet. Nam nec dictum lacus, nec iaculis mauris. Cras justo erat, tempus eu nibh eu, dignissim cursus magna. In lacinia pretium ante ultricies congue. Maecenas iaculis, nisi at blandit congue, nisi felis facilisis urna, sit amet pellentesque mi ex in urna.
-
-                    Phasellus egestas ligula quis ex ultrices, et vestibulum dui tempus. Nam eu purus ullamcorper, tristique quam a, dignissim odio. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed ultricies nulla urna. Sed et eros efficitur, feugiat lacus sit amet, finibus odio. Praesent posuere ante ut massa viverra bibendum. Integer mauris nisi, porta efficitur ultricies suscipit, rhoncus et nibh. Vivamus consequat nec odio quis blandit. Nam euismod pharetra sapien sed pellentesque. Sed eleifend erat enim, vitae hendrerit tortor facilisis at. Phasellus ut cursus erat. In id ante a magna ultrices bibendum sit amet quis quam. Phasellus erat odio, ultricies eget diam ut, porta condimentum elit. Nunc facilisis, purus ut elementum congue, ligula orci cursus sapien, sit amet aliquet felis dui tincidunt odio. Praesent eget tincidunt quam.
-
-                    Donec eget feugiat ex. Donec sapien lorem, cursus quis dolor non, blandit elementum orci. Cras id velit tempus, pretium felis at, pretium ante. Fusce eu sapien accumsan, blandit velit nec, rutrum nisi. Quisque malesuada tellus rhoncus magna gravida scelerisque. Quisque tincidunt ante ut diam vestibulum ultrices. Mauris porta aliquet urna et porta. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed sit amet elit eget tortor convallis pellentesque id eget tortor. Nulla sagittis, tortor ac porta sagittis, leo est volutpat purus, ut laoreet diam magna a felis. Sed ut ultrices risus. Duis eu nibh sed turpis consectetur consequat et a urna.
-
-                    Fusce quis porttitor elit. Proin erat ante, rutrum a orci at, luctus varius felis. Vestibulum ullamcorper diam id convallis feugiat. Morbi eleifend, nisl sit amet interdum interdum, augue diam placerat mauris, eu vehicula purus arcu eget tortor. Aliquam convallis facilisis finibus. Morbi sit amet commodo arcu. In eget laoreet dui, quis dapibus odio. Aliquam rhoncus eros congue urna semper, ut congue justo molestie. Suspendisse potenti. Suspendisse ultrices tincidunt scelerisque. Quisque id risus nisl.
-
-                    Nam a quam at ex bibendum tempor vel vitae nisi. Pellentesque ut eros et libero tincidunt ullamcorper sollicitudin sed leo. Sed mollis ante a arcu tincidunt, sit amet ultricies nisl blandit. Aenean tincidunt ante et purus hendrerit, a laoreet massa gravida. Vestibulum vel tristique eros, ut interdum metus. Ut vel nibh quis neque elementum elementum ut sed ante. Aliquam aliquet erat non leo porttitor congue. Integer in convallis ante. Sed vitae felis diam. Donec at porta sapien, ut dictum lorem. Maecenas orci lacus, bibendum eget nunc ut, tincidunt mattis lectus.
-                </p>
-            </div>
-        </li>
-    </ul>
-
 
         <script src="scripts/firebase.js"></script>
         <script>
@@ -84,6 +73,7 @@
         <script src="scripts/js/app.js"></script>
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="scripts/platformOverrides.js"></script>
+        <script src="scripts/loadPage.js"></script>
         <script type="text/javascript" src="scripts/index.js"></script>
     </body>
 </html>
