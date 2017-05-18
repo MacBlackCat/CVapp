@@ -1,3 +1,3 @@
 ﻿function loadPage(page) {
-    console.log(page);
+    $("#mainContainer").load("data/" + page + "Page.html");
 }

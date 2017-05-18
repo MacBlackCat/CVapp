@@ -4,14 +4,15 @@
 // and then run "window.location.reload()" in the JavaScript Console.
 (function () {
     "use strict";
-    //testDatabase();
+    testDatabase();
 
     document.addEventListener('deviceready', onDeviceReady.bind(this), false);
 
     function onDeviceReady() {
         // Handle the Cordova pause and resume events
         document.addEventListener( 'pause', onPause.bind( this ), false );
-        document.addEventListener( 'resume', onResume.bind( this ), false );
+        document.addEventListener('resume', onResume.bind(this), false);
+        loadPage('home');
         /*
         // TODO: Cordova has been loaded. Perform any initialization that requires Cordova here.
         var parentElement = document.getElementById('deviceready');
@@ -35,8 +36,8 @@ function testDatabase() {
     var database = firebase.database();
 
     // TEST code, enable to test Android deployment/firebase connection
-    /*database.ref('/test').once('value').then(function (snappyData) {
+    database.ref('/test').once('value').then(function (snappyData) {
         console.log(snappyData.val().value);
         $("#derptest").html("<h1>" + snappyData.val().value + "</h1>");
-    });*/ 
+    }); 
 }
