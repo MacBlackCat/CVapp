@@ -4,7 +4,7 @@
 // and then run "window.location.reload()" in the JavaScript Console.
 (function () {
     "use strict";
-    testDatabase();
+    //testDatabase();
 
     document.addEventListener('deviceready', onDeviceReady.bind(this), false);
 
@@ -12,6 +12,8 @@
         // Handle the Cordova pause and resume events
         document.addEventListener( 'pause', onPause.bind( this ), false );
         document.addEventListener('resume', onResume.bind(this), false);
+        document.addEventListener("backbutton", onBackKeyDown, false);
+
         loadPage('home');
         /*
         // TODO: Cordova has been loaded. Perform any initialization that requires Cordova here.
@@ -30,6 +32,10 @@
         // TODO: This application has been reactivated. Restore application state here.
     }
 })();
+
+function onBackKeyDown() {
+    navigator.app.exitApp();
+}
 
 function testDatabase() {
     //$("#derptest").html("<h1>error2.0</h1>");

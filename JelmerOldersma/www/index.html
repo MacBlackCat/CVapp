@@ -18,10 +18,11 @@
     <title>JelmerOldersma</title>
 </head>
 <body>
-    <div class="title-bar" id="topHeader"><!-- Title bar -> Title + hamburger button for offcanvas menu -->
-        <button type="button" class="float-left menu-icon" data-toggle="offCanvasLeft"></button>
-        <span class="title-bar-title float-center">CV App</span>
-    </div>
+        <div class="title-bar">
+            <!-- Title bar -> Title + hamburger button for offcanvas menu -->
+            <button type="button" class="float-left menu-icon" data-toggle="offCanvasLeft"></button>
+            <span class="float-center">CV App</span>
+        </div>
     <!-- Test div, for android deployment/firebase connection
     <div class="row">
         <div id="derptest"><h6>Error</h6></div>
@@ -36,17 +37,18 @@
                 </button>
                 
                 <ul style="list-style-type:none"> <!-- Menu List -->
-                    <li><a href="#" class="button" onclick="loadPage('home')">Home</a></li>
-                    <li><a href="#" class="button" onclick="loadPage('projects')">Projects</a></li>
-                    <li><a href="#" class="button" onclick="loadPage('about')">About Me</a></li>
-                    <li><a href="#" class="button" onclick="loadPage('contact')">Contact</a></li>
+                    <li><a href="#" class="button" onclick="loadPage('home')" data-close>Home</a></li>
+                    <li><a href="#" class="button" onclick="loadPage('projects')" data-close>Projects</a></li>
+                    <li><a href="#" class="button" onclick="loadPage('about')" data-close>About Me</a></li>
+                    <li><a href="#" class="button" onclick="loadPage('contact')" data-close>Contact</a></li>
                 </ul>
             </div>
             <!-- -->
 
             <!-- Main content div-->
-            <div class="off-canvas-content" data-off-canvas-content id="mainContainer">
-
+            <div class="off-canvas-content" data-off-canvas-content>
+                <span class="alert label">Alpha build</span><!-- ALPHA BUILD LABEL  -->
+                <div id="mainContainer"></div>
             </div>
             <!-- -->
 
